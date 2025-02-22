@@ -21,4 +21,4 @@ jobs:
         run: pip install requests
 
       - name: Run script
-        run: python bot.py
+        run: python req_bot.py
