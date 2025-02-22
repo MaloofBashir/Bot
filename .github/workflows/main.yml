@@ -8,10 +8,13 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
+    concurrency:  
+      group: "college-bot"  
+      cancel-in-progress: true  # Cancels previous runs if a new one starts
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-      
+        uses: actions/checkout@v3  
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
